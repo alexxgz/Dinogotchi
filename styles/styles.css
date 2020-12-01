@@ -1,3 +1,63 @@
 * {
     box-sizing: border-box;
   }
+
+  html {
+    min-height: 100%;
+    background-color: greenyellow;
+    background-image: url(https://www.webintravel.com/wp-content/uploads/2020/03/Jungle.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+ }
+
+.levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+ .tired {
+     font-size: x-large;
+     font-weight: bold;
+     color: red;
+ }
+ .sleep:hover{
+    background-color: brown;
+    color: navy;
+ }
+ .hunger {
+     font-size: x-large;
+     font-weight: bold;
+     color: red;
+ }
+ .feed:hover {
+    background-color: brown;
+    color: navy;
+ }
+ .bored {
+     font-size: x-large;
+     font-weight: bold;
+     color: red;
+ }
+ .play:hover {
+    background-color: brown;
+    color: navy;
+ }
+ .name {
+     font-size: xx-large;
+     font-weight: bold;
+     color: red;
+ }
+ .age {
+     font-size: xx-large;
+     font-weight: bold;
+     color: red;
+ }
