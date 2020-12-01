@@ -17,6 +17,9 @@ First project - Made a tamagotchi like game
 
 7. Every 5 minutes the dinosaur will go up in age and you will see him grow. Keep him alive long enough so he can live a long happy life. 
 
-8. The game will look something like this. VVVVVVVV
+8. Once your pet reaches 20 years old he could fend for himself and the game is over for the user. You should feel like a proud parent! (: 
+
+Update: Game looks nothing like this lol
+9. The game will look something like this. VVVVVVVV
  <img src="https://git.generalassemb.ly/alexgz/My-Tamagotchi/blob/master/pictures/Tamagotchi-Wireframe.pdf" alt="Tamagotchi">
 
