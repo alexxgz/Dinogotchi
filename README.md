@@ -11,11 +11,12 @@ First project - Made a tamagotchi like game
 4. Starting off his Hunger will be at 4
     Tired and Bored will start at 0. 
 
-5. Every minute inactive all 3 - Tired, Hunger, and bored will go up one number 
+5. Every minute inactive all 3 - Tired, Hunger, and Bored will go up one number 
 
-6. There will be buttons to Feed, play, and make him go to sleep so that the numbers will stay low (0 is where you want all 3 numbers to always be)
+6. There will be buttons to Feed, Play, and make him go to Sleep so that the numbers will stay low (0 is where you want all 3 numbers to always be)
 
-7. Every 5 minutes the dinosaur will go up in age and you will see him grow. Keep hime alive long enough so he can live a long happy life. 
+7. Every 5 minutes the dinosaur will go up in age and you will see him grow. Keep him alive long enough so he can live a long happy life. 
 
-
+8. The game will look something like this. VVVVVVVV
+ <img src="" alt="Tamagotchi">
 
