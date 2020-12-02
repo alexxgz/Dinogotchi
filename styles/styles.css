@@ -29,6 +29,11 @@
      font-weight: bold;
      color: red;
  }
+ .sleep {
+     border-radius: 7px;
+     background-color: navy;
+     color: red;
+ }
  .sleep:hover{
     background-color: brown;
     color: navy;
@@ -39,6 +44,11 @@
      font-weight: bold;
      color: red;
  }
+ .feed {
+    border-radius: 7px;
+    background-color: navy;
+    color: red;
+ }
  .feed:hover {
     background-color: brown;
     color: navy;
@@ -48,6 +58,11 @@
      font-size: x-large;
      font-weight: bold;
      color: red;
+ }
+ .play {
+    border-radius: 7px;
+    background-color: navy;
+    color: red;
  }
  .play:hover {
     background-color: brown;
@@ -64,11 +79,34 @@
      font-weight: bold;
      color: red;
  }
+ .start-button {
+    position: absolute;
+    top: 25%;
+    left: 50%;
 
+ }
+ .start-game {
+    border-radius: 7px;
+    background-color: gold;
+    color: navy;
+    
+ }
+ .start-game:hover {
+    background-color: brown;
+    color: navy;
+    cursor: pointer;
+ }
+ .dino-egg {
+     position: absolute;
+     bottom: -25px;
+     left: 48%;
+     z-index: 2;
+}
  .dino {
-     position: fixed;
+     position: absolute;
      bottom: 0px;
      left: 50%;
+     z-index: 1;
  }
 
  
