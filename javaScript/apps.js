@@ -11,7 +11,9 @@ $(".feed").on("click", function () {
 $(".play").on("click", function () {
     console.log("Dino is playing");
 });
+$(".start-game").on("click", function () {
+    console.log("The game has begun");
+});
 
-const feeding = function feeding() {
 
-}
+
