@@ -4,7 +4,7 @@
 
   html {
     min-height: 100%;
-    background-color: greenyellow;
+    background-color: greenyellow; 
     background-image: url(https://www.webintravel.com/wp-content/uploads/2020/03/Jungle.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +32,7 @@
  .sleep:hover{
     background-color: brown;
     color: navy;
+    cursor: pointer;
  }
  .hunger {
      font-size: x-large;
@@ -41,6 +42,7 @@
  .feed:hover {
     background-color: brown;
     color: navy;
+    cursor: pointer;
  }
  .bored {
      font-size: x-large;
@@ -50,6 +52,7 @@
  .play:hover {
     background-color: brown;
     color: navy;
+    cursor: pointer;
  }
  .name {
      font-size: xx-large;
@@ -61,3 +64,12 @@
      font-weight: bold;
      color: red;
  }
+
+ .dino {
+     position: fixed;
+     bottom: 0px;
+     left: 50%;
+ }
+
+ 
+
