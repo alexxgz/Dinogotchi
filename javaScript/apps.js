@@ -35,33 +35,35 @@ $(".start").on("click", function (event) {
 });
 
 
-let age = 0;
+let age = 1;
 const setTimer = function setTimer() {
 
     const updateAge = function updateAge() {
         console.log("Happy Birthday", age);
         $(".age").text(`Age: ${age}`);
         age++;
-        if (age <= 18) {
-
+        if (age == 19) {
+            clearInterval(birthday)
+            console.log("Congratulations! You were in amazing parent")
         }
     };
-    const birthday = setInterval(updateAge, 1000);
+    const birthday = setInterval(updateAge, 60000);
 };
 
 
-let sleep = 0;
+let sleep = 1;
 const tiredLevel = function tiredLevel() {
 
     const updateTired = function updateTired() {
         console.log("Sleep level", sleep);
         $(".tired").text(`Tired Level: ${sleep}`);
         sleep++;
-        if (sleep <= 10) {
-
+        if (sleep == 11) {
+            clearInterval(tired)
+            console.log("Game over!")
         }
     };
-    const tired = setInterval(updateTired, 1000);
+    const tired = setInterval(updateTired, 15000);
 };
 
 
@@ -72,25 +74,27 @@ const feedLevel = function feedLevel() {
         console.log("Huger level", hunger);
         $(".hunger").text(`Huger level: ${hunger}`);
         hunger++;
-        if (hunger <= 10) {
-
+        if (hunger == 11) {
+            clearInterval(feedMe)
+            console.log("Game over!")
         }
     };
-    const feedMe = setInterval(updateHunger, 1000);
+    const feedMe = setInterval(updateHunger, 15000);
 };
 
 
-let bored = 0;
+let bored = 1;
 const boredLevel = function boredLevel() {
 
     const updatePlay = function updatePlay() {
         console.log("Play level", bored);
         $(".bored").text(`Bored level: ${bored}`);
         bored++;
-        if (bored <= 10) {
-
+        if (bored == 11) {
+            clearInterval(play)
+            console.log("Game over!")
         }
     };
-    const play = setInterval(updatePlay, 1000);
+    const play = setInterval(updatePlay, 15000);
 };
 
