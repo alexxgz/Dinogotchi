@@ -16,16 +16,14 @@
     position: relative;
     text-align: center;
     top: 0%;
+    font-family: 'Texturina', serif;
+    font-size: x-large;
+    color: red;
  }
  #welcome {
      font-size: xx-large;
      color: red;
  }
-.instructions{
-    font-family: 'Texturina', serif;
-    font-size: x-large;
-    color: red;
-}
 
 .levels {
     display: flex;
@@ -99,7 +97,6 @@
     text-align: center;
     top: 25%;
     
-
  }
  .input-text {
     position: relative;
@@ -137,5 +134,20 @@
      z-index: 1;
  }
 
- 
+ .gameOver {
+     text-align: center;
+ }
+ .failed {
+    font-family: 'Texturina', serif;
+    font-size: x-large;
+    color: red;
+ }
 
+ .youWin {
+     text-align: center;
+ }
+.winner {
+    font-family: 'Texturina', serif;
+    font-size: x-large;
+    color: gold;
+}
