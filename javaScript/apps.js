@@ -12,29 +12,20 @@ $(".play").on("click", function () {
     console.log("Dino is playing");
 });
 
-$(".start-game").on("click", function () {
+$(".start").on("click", function () {
+    $(".identity").show();
+    $(".controls").show();
+    $(".instructions").hide();
+    $(".input-text").hide();
+    $(".dino-egg").hide();
+    $(".start-game").hide();
     console.log("The game has begun");
 });
 
 
-$(".start-game").on("click", function () {
-    $(".identity").show();
+$(".start").on("click", function (event) {
+    event.preventDefault();
+    let inputValue = $(".baby-name").val()
+    $(".name").text(inputValue)
+    console.log(inputValue);
 });
-
-$(".start-game").on("click", function () {
-    $(".controls").show();
-});
-
-$(".start-game").click(function () {
-    $(".instructions").hide();
-});
-$(".start-game").click(function () {
-    $(".input-text").hide();
-});
-$(".start-game").click(function () {
-    $(".dino-egg").hide();
-});
-$(".start-game").click(function () {
-    $(".start-game").hide();
-});
-
