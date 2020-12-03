@@ -1,14 +1,20 @@
 console.log("It's alive");
 
 $(".sleep").on("click", function () {
-    console.log("Dino is going to sleep");
+    sleep = sleep - 1;
+    $(".tired").text(`Tired level: ${sleep}`);
+    console.log("Dino is going to sleep", sleep);
 });
 
 $(".feed").on("click", function () {
+    hunger = hunger - 1;
+    $(".hunger").text(`Huger level: ${hunger}`);
     console.log("Dino is eating");
 });
 
 $(".play").on("click", function () {
+    bored = bored - 1;
+    $(".bored").text(`Bored level: ${bored}`);
     console.log("Dino is playing");
 });
 
@@ -35,66 +41,82 @@ $(".start").on("click", function (event) {
 });
 
 
+const timers = {
+    age: null,
+    sleep: null,
+    hunger: null,
+    bored: null,
+}
+
 let age = 1;
 const setTimer = function setTimer() {
 
     const updateAge = function updateAge() {
+        age++;
         console.log("Happy Birthday", age);
         $(".age").text(`Age: ${age}`);
-        age++;
         if (age == 19) {
-            clearInterval(birthday)
-            console.log("Congratulations! You were in amazing parent")
+            console.log("Congratulations! You were an amazing parent")
+            endGame();
         }
     };
-    const birthday = setInterval(updateAge, 60000);
+    timers.age = setInterval(updateAge, 30000);
 };
 
 
-let sleep = 1;
+let sleep = 0;
 const tiredLevel = function tiredLevel() {
 
     const updateTired = function updateTired() {
+        sleep++;
         console.log("Sleep level", sleep);
         $(".tired").text(`Tired level: ${sleep}`);
-        sleep++;
-        if (sleep == 11) {
-            clearInterval(tired)
+        if (sleep == 10) {
             console.log("Game over!")
+            endGame();
         }
     };
-    const tired = setInterval(updateTired, 15000);
+    timers.sleep = setInterval(updateTired, 10000);
 };
 
 
-let hunger = 5;
+let hunger = 4;
 const feedLevel = function feedLevel() {
 
     const updateHunger = function updateHunger() {
+        hunger++;
         console.log("Huger level", hunger);
         $(".hunger").text(`Huger level: ${hunger}`);
-        hunger++;
-        if (hunger == 11) {
-            clearInterval(feedMe)
+        if (hunger == 10) {
             console.log("Game over!")
+            endGame();
         }
     };
-    const feedMe = setInterval(updateHunger, 15000);
+    timers.hunger = setInterval(updateHunger, 10000);
 };
 
 
-let bored = 1;
+let bored = 0;
 const boredLevel = function boredLevel() {
 
     const updatePlay = function updatePlay() {
+        bored++;
         console.log("Play level", bored);
         $(".bored").text(`Bored level: ${bored}`);
-        bored++;
-        if (bored == 11) {
-            clearInterval(play)
+        if (bored == 10) {
             console.log("Game over!")
+            endGame();
         }
     };
-    const play = setInterval(updatePlay, 15000);
+    timers.bored = setInterval(updatePlay, 10000);
 };
 
+
+const endGame = function endGame() {
+    clearInterval(timers.hunger);
+    clearInterval(timers.bored);
+    clearInterval(timers.sleep);
+    clearInterval(timers.age);
+    $(".dino").hide();
+    $(".gameOver").show();
+};
