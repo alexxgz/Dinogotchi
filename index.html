@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tamagotchi</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Texturina:wght@800&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="javaScript/apps.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header class="controls" style="display: none;">
         <div class="levels">
             <p class="tired">Tired level: 0 </p>
             <p class="hunger"> Hunger level: 4 </p>
@@ -24,11 +25,22 @@
         </div>
     </header>
 
+    <div class="instructions">
+        <p><span id="welcome">Welcome!</span> So you think you can be a good parent?</p>
+        <p> Keep your dino alive long enough and watch him grow until he is 18 and can fend for him self.<br>
+            Don't let his levels reach 10 or he will die and you WILL get shot<br>
+            Good luck! (: <br> Enter name and press start to begin parenthood </p>
+    </div>
+
+    <div class="input-text">
+        <input type="text" class="baby-name" name="name" placeholder="What would you like to name your new baby?">
+    </div>
+
     <div class="start-button">
         <button class="start-game">Start</button>
     </div>
 
-    <div class="identity">
+    <div class="identity" style="display: none;">
         <p class="name">Name: </p>
         <p class="age">Age: 0 </p>
     </div>
