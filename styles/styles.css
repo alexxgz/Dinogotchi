@@ -12,6 +12,21 @@
     background-attachment: fixed;
  }
 
+ .instructions {
+    position: relative;
+    text-align: center;
+    top: 0%;
+ }
+ #welcome {
+     font-size: xx-large;
+     color: red;
+ }
+.instructions{
+    font-family: 'Texturina', serif;
+    font-size: x-large;
+    color: red;
+}
+
 .levels {
     display: flex;
     flex-wrap: wrap;
@@ -80,10 +95,21 @@
      color: red;
  }
  .start-button {
-    position: absolute;
+    position: relative;
+    text-align: center;
     top: 25%;
-    left: 50%;
+    
 
+ }
+ .input-text {
+    position: relative;
+    text-align: center;
+    top: 20%;
+ }
+
+ .baby-name {
+    width: 390px;
+    font-size:14pt;
  }
  .start-game {
     border-radius: 7px;
