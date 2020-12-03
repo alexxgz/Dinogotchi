@@ -56,7 +56,7 @@ const tiredLevel = function tiredLevel() {
 
     const updateTired = function updateTired() {
         console.log("Sleep level", sleep);
-        $(".tired").text(`Tired Level: ${sleep}`);
+        $(".tired").text(`Tired level: ${sleep}`);
         sleep++;
         if (sleep == 11) {
             clearInterval(tired)
@@ -67,7 +67,7 @@ const tiredLevel = function tiredLevel() {
 };
 
 
-let hunger = 4;
+let hunger = 5;
 const feedLevel = function feedLevel() {
 
     const updateHunger = function updateHunger() {
