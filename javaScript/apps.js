@@ -48,19 +48,19 @@ const timers = {
     bored: null,
 }
 
-let age = 1;
+let age = 0;
 const setTimer = function setTimer() {
 
     const updateAge = function updateAge() {
         age++;
         console.log("Happy Birthday", age);
         $(".age").text(`Age: ${age}`);
-        if (age == 19) {
+        if (age == 18) {
             console.log("Congratulations! You were an amazing parent")
             endGame();
         }
     };
-    timers.age = setInterval(updateAge, 30000);
+    timers.age = setInterval(updateAge, 10000);
 };
 
 
@@ -76,7 +76,7 @@ const tiredLevel = function tiredLevel() {
             endGame();
         }
     };
-    timers.sleep = setInterval(updateTired, 10000);
+    timers.sleep = setInterval(updateTired, 5000);
 };
 
 
@@ -92,7 +92,7 @@ const feedLevel = function feedLevel() {
             endGame();
         }
     };
-    timers.hunger = setInterval(updateHunger, 10000);
+    timers.hunger = setInterval(updateHunger, 5000);
 };
 
 
@@ -108,15 +108,25 @@ const boredLevel = function boredLevel() {
             endGame();
         }
     };
-    timers.bored = setInterval(updatePlay, 10000);
+    timers.bored = setInterval(updatePlay, 5000);
 };
 
 
 const endGame = function endGame() {
-    clearInterval(timers.hunger);
-    clearInterval(timers.bored);
-    clearInterval(timers.sleep);
-    clearInterval(timers.age);
-    $(".dino").hide();
-    $(".gameOver").show();
+    if (age == 18) {
+        clearInterval(timers.age);
+        clearInterval(timers.hunger);
+        clearInterval(timers.bored);
+        clearInterval(timers.sleep);
+        $(".dino").hide();
+        $(".youWin").show();
+    } else {
+        clearInterval(timers.age);
+        clearInterval(timers.hunger);
+        clearInterval(timers.bored);
+        clearInterval(timers.sleep);
+        $(".dino").hide();
+        $(".gameOver").show();
+    }
 };
+
