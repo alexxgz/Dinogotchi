@@ -61,11 +61,13 @@ const setTimer = function setTimer() {
             endGame();
         }
     };
-    timers.age = setInterval(updateAge, 10000);
+    timers.age = setInterval(updateAge, 5000);
 };
 
 const growDino = function growDino() {
     if (age == 5) {
+        $(".dino").attr("src", "https://i.imgur.com/1VnW8oq.gif");
+    } if (age == 10) {
         $(".dino").attr("src", "https://i.imgur.com/FADHNpm.gif");
     }
 };
@@ -78,12 +80,12 @@ const tiredLevel = function tiredLevel() {
         sleep++;
         console.log("Sleep level", sleep);
         $(".tired").text(`Tired level: ${sleep}`);
-        if (sleep == 10) {
+        if (sleep <= 0 || sleep == 10) {
             console.log("Game over!")
             endGame();
         }
     };
-    timers.sleep = setInterval(updateTired, 2000);
+    timers.sleep = setInterval(updateTired, 1500);
 };
 
 
@@ -94,12 +96,12 @@ const feedLevel = function feedLevel() {
         hunger++;
         console.log("Huger level", hunger);
         $(".hunger").text(`Huger level: ${hunger}`);
-        if (hunger == 10) {
+        if (hunger <= 0 || hunger == 10) {
             console.log("Game over!")
             endGame();
         }
     };
-    timers.hunger = setInterval(updateHunger, 2000);
+    timers.hunger = setInterval(updateHunger, 1000);
 };
 
 
@@ -110,12 +112,12 @@ const boredLevel = function boredLevel() {
         bored++;
         console.log("Play level", bored);
         $(".bored").text(`Bored level: ${bored}`);
-        if (bored == 10) {
+        if (bored <= 0 || bored == 10) {
             console.log("Game over!")
             endGame();
         }
     };
-    timers.bored = setInterval(updatePlay, 2000);
+    timers.bored = setInterval(updatePlay, 1500);
 };
 
 const endGame = function endGame() {
