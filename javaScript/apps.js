@@ -53,6 +53,7 @@ const setTimer = function setTimer() {
 
     const updateAge = function updateAge() {
         age++;
+        growDino();
         console.log("Happy Birthday", age);
         $(".age").text(`Age: ${age}`);
         if (age == 18) {
@@ -61,6 +62,12 @@ const setTimer = function setTimer() {
         }
     };
     timers.age = setInterval(updateAge, 10000);
+};
+
+const growDino = function growDino() {
+    if (age == 5) {
+        $(".dino").attr("src", "https://i.imgur.com/FADHNpm.gif");
+    }
 };
 
 
@@ -76,7 +83,7 @@ const tiredLevel = function tiredLevel() {
             endGame();
         }
     };
-    timers.sleep = setInterval(updateTired, 5000);
+    timers.sleep = setInterval(updateTired, 2000);
 };
 
 
@@ -92,7 +99,7 @@ const feedLevel = function feedLevel() {
             endGame();
         }
     };
-    timers.hunger = setInterval(updateHunger, 5000);
+    timers.hunger = setInterval(updateHunger, 2000);
 };
 
 
@@ -108,9 +115,8 @@ const boredLevel = function boredLevel() {
             endGame();
         }
     };
-    timers.bored = setInterval(updatePlay, 5000);
+    timers.bored = setInterval(updatePlay, 2000);
 };
-
 
 const endGame = function endGame() {
     if (age == 18) {
@@ -129,4 +135,3 @@ const endGame = function endGame() {
         $(".gameOver").show();
     }
 };
-
