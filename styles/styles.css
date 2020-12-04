@@ -5,7 +5,7 @@
   html {
     min-height: 100%;
     background-color: greenyellow; 
-    background-image: url(https://www.webintravel.com/wp-content/uploads/2020/03/Jungle.jpg);
+    background-image: url(https://i.imgur.com/XdCo4mB.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -46,11 +46,14 @@
      border-radius: 7px;
      background-color: navy;
      color: red;
+     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
  }
  .sleep:hover{
     background-color: brown;
     color: navy;
     cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em navy;
+    transform: translateY(-0.25em);
  }
  .hunger {
      font-size: x-large;
@@ -61,11 +64,14 @@
     border-radius: 7px;
     background-color: navy;
     color: red;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
  }
  .feed:hover {
     background-color: brown;
     color: navy;
     cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em navy;
+    transform: translateY(-0.25em);
  }
  .bored {
      font-size: x-large;
@@ -76,11 +82,14 @@
     border-radius: 7px;
     background-color: navy;
     color: red;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
  }
  .play:hover {
     background-color: brown;
     color: navy;
     cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em navy;
+    transform: translateY(-0.25em);
  }
  .name {
      font-size: xx-large;
