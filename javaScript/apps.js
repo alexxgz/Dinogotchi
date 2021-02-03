@@ -1,23 +1,27 @@
 console.log("It's alive");
 
+// Sleep Button
 $(".sleep").on("click", function () {
     sleep = sleep - 1;
     $(".tired").text(`Tired level: ${sleep}`);
     console.log("Dino is going to sleep", sleep);
 });
 
+// Hunger Button
 $(".feed").on("click", function () {
     hunger = hunger - 1;
     $(".hunger").text(`Huger level: ${hunger}`);
     console.log("Dino is eating");
 });
 
+// Play Button
 $(".play").on("click", function () {
     bored = bored - 1;
     $(".bored").text(`Bored level: ${bored}`);
     console.log("Dino is playing");
 });
 
+// Begin Game function
 $(".start").on("click", function () {
     $(".identity").show();
     $(".controls").show();
@@ -32,7 +36,7 @@ $(".start").on("click", function () {
     boredLevel();
 });
 
-
+// Naming the Dinogotchi
 $(".start").on("click", function (event) {
     event.preventDefault();
     let inputValue = $(".baby-name").val()
@@ -40,7 +44,7 @@ $(".start").on("click", function (event) {
     console.log(inputValue);
 });
 
-
+// Timers
 const timers = {
     age: null,
     sleep: null,
@@ -48,6 +52,7 @@ const timers = {
     bored: null,
 }
 
+// Aging Function 
 let age = 0;
 const setTimer = function setTimer() {
 
@@ -64,6 +69,7 @@ const setTimer = function setTimer() {
     timers.age = setInterval(updateAge, 5000);
 };
 
+// How he grows after turning a certain age 
 const growDino = function growDino() {
     if (age == 5) {
         $(".dino").attr("src", "https://i.imgur.com/1VnW8oq.gif");
@@ -72,10 +78,9 @@ const growDino = function growDino() {
     }
 };
 
-
+// Sleeing Function
 let sleep = 0;
 const tiredLevel = function tiredLevel() {
-
     const updateTired = function updateTired() {
         sleep++;
         console.log("Sleep level", sleep);
@@ -88,10 +93,9 @@ const tiredLevel = function tiredLevel() {
     timers.sleep = setInterval(updateTired, 1500);
 };
 
-
+// Hungry Function
 let hunger = 4;
 const feedLevel = function feedLevel() {
-
     const updateHunger = function updateHunger() {
         hunger++;
         console.log("Huger level", hunger);
@@ -104,10 +108,9 @@ const feedLevel = function feedLevel() {
     timers.hunger = setInterval(updateHunger, 1000);
 };
 
-
+// Bored Button
 let bored = 0;
 const boredLevel = function boredLevel() {
-
     const updatePlay = function updatePlay() {
         bored++;
         console.log("Play level", bored);
@@ -120,6 +123,7 @@ const boredLevel = function boredLevel() {
     timers.bored = setInterval(updatePlay, 1500);
 };
 
+// Function to end the game 
 const endGame = function endGame() {
     if (age == 18) {
         clearInterval(timers.age);
